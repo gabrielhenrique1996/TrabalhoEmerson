@@ -1,0 +1,10 @@
+CREATE TABLE IF NOT EXISTS vendas (
+	id INT NOT NULL AUTO_INCREMENT PRIMARY KEY,
+	`tipo` VARCHAR(128) NOT NULL,
+	`setor` VARCHAR(128) NOT NULL,
+	`start` DATE NOT NULL,
+	`end` DATE,
+	user_id INT NOT NULL,
+	FOREIGN KEY(user_id)
+	REFERENCES users(id)
+);
